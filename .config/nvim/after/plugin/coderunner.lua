@@ -6,7 +6,7 @@ require('code_runner').setup({
         --  Position to open the terminal, this option is ignored if mode is tab
         position = "bot",
         -- window size, this option is ignored if tab is true
-        size = 8,
+        size = 8
     },
     float = {
         -- Key that close the code_runner floating window
@@ -25,18 +25,13 @@ require('code_runner').setup({
         float_hl = "Normal",
 
         -- Transparency (see ':h winblend')
-        blend = 0,
+        blend = 0
     },
     -- put here the commands by filetype
     filetype = {
         java = "cd $dir && javac $fileName && java $fileNameWithoutExt",
         python = "python3 -u",
         typescript = "deno run",
-        rust = "cd $dir && rustc $fileName && $dir/$fileNameWithoutExt",
-        matlab ="matlab --nodisplay"
-    },
+        rust = "cd $dir && rustc $fileName && $dir/$fileNameWithoutExt"
+    }
 })
-
-vim.keymap.set("n", "<leader>e", function()
-    require("betterTerm").send(require("code_runner.commands").get_filetype_command(), 1, false)
-end, { desc = "Excute File"})
