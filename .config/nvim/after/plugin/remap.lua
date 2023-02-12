@@ -82,3 +82,4 @@ vmap.set("n", "<leader>s",
 -- Insert blank lines
 vmap.set("n", "<leader>o", 'o<Esc>0"_D')
 vmap.set("n", "<leader>O", 'O<Esc>0"_D')
+vmap.set("n", "<leader>cd", ":cd %:h<CR>")

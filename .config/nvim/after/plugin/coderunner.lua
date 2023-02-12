@@ -6,7 +6,7 @@ require('code_runner').setup({
         --  Position to open the terminal, this option is ignored if mode is tab
         position = "bot",
         -- window size, this option is ignored if tab is true
-        size = 8
+        size = 6
     },
     float = {
         -- Key that close the code_runner floating window

@@ -114,7 +114,7 @@ return require('packer').startup(function(use)
 
         use { 'folke/neodev.nvim' }
 
-        use { 'nvim-tree/nvim-tree.lua' }
+        use {'nvim-tree/nvim-tree.lua'}
 
         use {
             "nvim-neotest/neotest",
@@ -145,7 +145,6 @@ return require('packer').startup(function(use)
         }
 
         use { 'tpope/vim-commentary' }
-
         -- Automatically set up your configuration after cloning packer.nvim
         -- Put this at the end after all plugins
         if packer_bootstrap then require('packer').sync() end
