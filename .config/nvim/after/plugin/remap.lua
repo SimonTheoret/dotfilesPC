@@ -38,11 +38,6 @@ vmap.set('n', '<leader>rp', ':RunProject<CR>', { noremap = true, silent = false 
 vmap.set('n', '<leader>rc', ':RunClose<CR>', { noremap = true, silent = false })
 vmap.set('n', '<leader>crf', ':CRFiletype<CR>', { noremap = true, silent = false })
 vmap.set('n', '<leader>crp', ':CRProjects<CR>', { noremap = true, silent = false })
-vim.keymap.set("n", "<leader>e", function()
-    require("betterTerm").send(
-        require("code_runner.commands").get_filetype_command(), 1,
-        { clean = false, interrupt = true })
-end, { desc = "Excute File" })
 
 -- Nvim-Tree:
 vmap.set('n', '<leader>pv', vim.cmd.NvimTreeToggle)

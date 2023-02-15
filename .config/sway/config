@@ -8,7 +8,7 @@ set $down j
 set $up k
 set $right l
 # Your preferred terminal emulator
-set $term alacritty 
+set $term alacritty
 
 
 ### Output configuration
@@ -43,15 +43,16 @@ output * bg ~/Images/Wallpapers/city-wallpaper.jpg fill
        tap enabled
        tap_button_map lrm
    }
-  input type:keyboard { 
+  input type:keyboard {
        xkb_layout ca
        xkb_model pc104
        xkb_variant multix
+       repeat_delay 200
+       repeat_rate 100
    }
 #
 # You can get the names of your inputs by running: swaymsg -t get_inputs
 # Read `man 5 sway-input` for more information about this section.
-
 ### Key bindings
 #
 # Basics:
@@ -63,7 +64,7 @@ output * bg ~/Images/Wallpapers/city-wallpaper.jpg fill
     bindsym $mod+q kill
 
     # Start ranger as file system
-    bindsym $mod+e exec alacritty -e ranger 
+    bindsym $mod+e exec alacritty -e ranger
 
     # Start rofi as application launcher
     bindsym $mod+d exec "rofi -show run"
@@ -77,8 +78,10 @@ output * bg ~/Images/Wallpapers/city-wallpaper.jpg fill
     bindsym XF86AudioLowerVolume exec amixer set Master 5%-
     bindsym XF86AudioMute exec amixer set Master toggle
 
-    # Take capture with slurp and copy to clipboard with wl-clipboard:
+    # Take screen capture with slurp and copy to clipboard with wl-clipboard:
     bindsym Print exec grim -g "$(slurp)" - | wl-copy
+    # Take screen capture with slurp and save to Images/screenshots directory:
+    bindsym Shift+Print exec grim -g "$(slurp)" "$HOME/Images/screenshots/$(date '+%y%m%d_%H-%M-%S').png"
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
     # Despite the name, also works for non-floating windows.
@@ -214,9 +217,9 @@ bar {
 include /etc/sway/config.d/*
 
 #Personal scripts to run at start and a bit of config
-#exec_always waybar 
+#exec_always waybar
 
-exec_always alacritty 
+exec_always alacritty
 
 gaps inner 10
 

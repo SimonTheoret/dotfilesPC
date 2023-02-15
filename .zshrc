@@ -28,6 +28,7 @@ alias cd='z'
 alias cdold='cd'
 alias spotify='spotify-launcher'
 alias oldspotify='spotify'
+alias execmatlab='~/Execs/execmatlab.sh'
 # Add the actual directory path:
 PS1='%n@%m %~$ '
 
