@@ -74,6 +74,11 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
+  ["FixCursorHold.nvim"] = {
+    loaded = true,
+    path = "/home/simon/.local/share/nvim/site/pack/packer/start/FixCursorHold.nvim",
+    url = "https://github.com/antoinemadec/FixCursorHold.nvim"
+  },
   LuaSnip = {
     loaded = true,
     path = "/home/simon/.local/share/nvim/site/pack/packer/start/LuaSnip",
@@ -93,6 +98,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/simon/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp",
     url = "https://github.com/hrsh7th/cmp-nvim-lsp"
+  },
+  ["cmp-nvim-lsp-signature-help"] = {
+    loaded = true,
+    path = "/home/simon/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp-signature-help",
+    url = "https://github.com/hrsh7th/cmp-nvim-lsp-signature-help"
   },
   ["cmp-nvim-lua"] = {
     loaded = true,
@@ -167,6 +177,26 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/simon/.local/share/nvim/site/pack/packer/start/neotest",
     url = "https://github.com/nvim-neotest/neotest"
+  },
+  ["neotest-python"] = {
+    loaded = true,
+    path = "/home/simon/.local/share/nvim/site/pack/packer/start/neotest-python",
+    url = "https://github.com/nvim-neotest/neotest-python"
+  },
+  ["neotest-rust"] = {
+    loaded = true,
+    path = "/home/simon/.local/share/nvim/site/pack/packer/start/neotest-rust",
+    url = "https://github.com/rouge8/neotest-rust"
+  },
+  ["neotest-testthat"] = {
+    loaded = true,
+    path = "/home/simon/.local/share/nvim/site/pack/packer/start/neotest-testthat",
+    url = "https://github.com/shunsambongi/neotest-testthat"
+  },
+  ["neotest-vim-test"] = {
+    loaded = true,
+    path = "/home/simon/.local/share/nvim/site/pack/packer/start/neotest-vim-test",
+    url = "https://github.com/nvim-neotest/neotest-vim-test"
   },
   ["null-ls.nvim"] = {
     loaded = true,
@@ -291,6 +321,11 @@ _G.packer_plugins = {
     path = "/home/simon/.local/share/nvim/site/pack/packer/start/vim-monokai",
     url = "https://github.com/sickill/vim-monokai"
   },
+  ["vim-test"] = {
+    loaded = true,
+    path = "/home/simon/.local/share/nvim/site/pack/packer/start/vim-test",
+    url = "https://github.com/vim-test/vim-test"
+  },
   vimtex = {
     loaded = true,
     path = "/home/simon/.local/share/nvim/site/pack/packer/start/vimtex",
@@ -308,6 +343,10 @@ time([[Defining packer_plugins]], false)
 time([[Config for trouble.nvim]], true)
 try_loadstring("\27LJ\2\n9\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\ftrouble\frequire\0", "config", "trouble.nvim")
 time([[Config for trouble.nvim]], false)
+-- Config for: nvim-surround
+time([[Config for nvim-surround]], true)
+try_loadstring("\27LJ\2\n?\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\18nvim-surround\frequire\0", "config", "nvim-surround")
+time([[Config for nvim-surround]], false)
 -- Config for: todo-comments.nvim
 time([[Config for todo-comments.nvim]], true)
 try_loadstring("\27LJ\2\n?\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\18todo-comments\frequire\0", "config", "todo-comments.nvim")
@@ -316,10 +355,6 @@ time([[Config for todo-comments.nvim]], false)
 time([[Config for gitsigns.nvim]], true)
 try_loadstring("\27LJ\2\n6\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\rgitsigns\frequire\0", "config", "gitsigns.nvim")
 time([[Config for gitsigns.nvim]], false)
--- Config for: nvim-surround
-time([[Config for nvim-surround]], true)
-try_loadstring("\27LJ\2\n?\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\18nvim-surround\frequire\0", "config", "nvim-surround")
-time([[Config for nvim-surround]], false)
 vim.cmd [[augroup packer_load_aucmds]]
 vim.cmd [[au!]]
   -- Event lazy-loads

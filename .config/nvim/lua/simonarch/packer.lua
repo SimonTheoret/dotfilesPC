@@ -2,7 +2,7 @@
 local ensure_packer = function()
     local fn = vim.fn
     local install_path = fn.stdpath('data') ..
-    '/site/pack/packer/start/packer.nvim'
+                             '/site/pack/packer/start/packer.nvim'
     if fn.empty(fn.glob(install_path)) > 0 then
         fn.system({
             'git', 'clone', '--depth', '1',
@@ -69,6 +69,7 @@ return require('packer').startup(function(use)
             {'hrsh7th/cmp-path'}, -- Optional
             {'saadparwaiz1/cmp_luasnip'}, -- Optional
             {'hrsh7th/cmp-nvim-lua'}, -- Optional
+            {'hrsh7th/cmp-nvim-lsp-signature-help'},
             -- Snippets
             {'L3MON4D3/LuaSnip'}, -- Required
             {'rafamadriz/friendly-snippets'} -- Optional
@@ -79,7 +80,8 @@ return require('packer').startup(function(use)
 
     use({
         "kylechui/nvim-surround",
-        tag = "*", -- Use for stability; omit to use `main` branch for the latest features
+        tag = "*", -- Use for stability; omit to use `main` branch for the
+        -- latest features
         config = function()
             require("nvim-surround").setup({
                 -- Configuration here, or leave empty to use defaults
@@ -118,8 +120,14 @@ return require('packer').startup(function(use)
 
     use {
         "nvim-neotest/neotest",
-        requires = {"nvim-lua/plenary.nvim", "nvim-treesitter/nvim-treesitter"}
+        requires = {
+            "nvim-lua/plenary.nvim", "nvim-treesitter/nvim-treesitter",
+            "nvim-neotest/neotest-python", "rouge8/neotest-rust",
+            "shunsambongi/neotest-testthat", "nvim-neotest/neotest-vim-test"
+        } -- neotest-testthat is R adapter while vim-test is a general adapter
     }
+
+    use 'vim-test/vim-test'
 
     use 'lervag/vimtex'
 
@@ -149,6 +157,9 @@ return require('packer').startup(function(use)
     use {'vimwiki/vimwiki'}
 
     use {'norcalli/nvim-colorizer.lua'}
+
+    use {'antoinemadec/FixCursorHold.nvim'}
+
     -- Automatically set up your configuration after cloning packer.nvim
     -- Put this at the end after all plugins
     if packer_bootstrap then require('packer').sync() end
