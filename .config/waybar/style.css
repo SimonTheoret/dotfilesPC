@@ -43,17 +43,20 @@ window#waybar.hidden {
 }
 
 #clock {
-    background-color: #64727D;
+    background: transparent
+    /* background-color: #64727D; */
 }
 
 #battery {
-    background-color: #ffffff;
-    color: #000000;
+    background: transparent;
+    /* background-color: #ffffff; */
+    color: #ffffff;
 }
 
 #battery.charging {
     color: #ffffff;
-    background-color: #26A65B;
+    background: transparent;
+    /* background-color: #26A65B; */
 }
 
 @keyframes blink {
@@ -64,6 +67,7 @@ window#waybar.hidden {
 }
 
 #battery.critical:not(.charging) {
+    /* background: transparent; */
     background: #f53c3c;
     color: #ffffff;
     animation-name: blink;
@@ -74,66 +78,93 @@ window#waybar.hidden {
 }
 
 #cpu {
-    background: #2ecc71;
-    color: #000000;
+    background: transparent;
+    /* background: #2ecc71; */
+    color: #ffffff;
 }
 
 #memory {
-    background: #9b59b6;
+    /* background: #9b59b6; */
+    color: #ffffff;
+    background: transparent;
 }
 
 #backlight {
-    background: #90b1b1;
+    color: #ffffff;
+    background: transparent;
+    /* background: #90b1b1; */
 }
 
 #network {
-    background: #2980b9;
+    color: #ffffff;
+    background: transparent;
+    /* background: #2980b9; */
 }
 
 #network.disconnected {
-    background: #f53c3c;
+    color: #ffffff;
+    background: transparent;
+    /* background: #f53c3c; */
 }
 
 #pulseaudio {
-    background: #f1c40f;
-    color: #000000;
+    background: transparent;
+    /* background: #f1c40f; */
+    color: #ffffff;
 }
 
 #pulseaudio.muted {
-    background: #90b1b1;
-    color: #2a5c45;
+    background: transparent;
+    color: #ffffff;
+    /* background: #90b1b1; */
 }
 
 #custom-media {
-    background: #66cc99;
-    color: #2a5c45;
+    /* background: #66cc99; */
+    background: transparent;
+    color: #ffffff;
+    /* color: #2a5c45; */
 }
 
 .custom-spotify {
-    background: #66cc99;
+    background: transparent;
+    color: #ffffff;
+    /* background: #66cc99; */
 }
 
 .custom-vlc {
-    background: #ffa000;
+    background: transparent;
+    color: #ffffff;
+    /* background: #ffa000; */
 }
 
 #temperature {
-    background: #f0932b;
+    background: transparent;
+    color: #ffffff;
+    /* background: #f0932b; */
 }
 
 #temperature.critical {
-    background: #eb4d4b;
+    background: transparent;
+    color: #ffffff;
+    /* background: #eb4d4b; */
 }
 
 #tray {
-    background-color: #2980b9;
+    background: transparent;
+    color: #ffffff;
+    /* background-color: #2980b9; */
 }
 
 #idle_inhibitor {
-    background-color: #2d3436;
+    background: transparent;
+    color: #ffffff;
+    /* background-color: #2d3436; */
 }
 
 #idle_inhibitor.activated {
-    background-color: #ecf0f1;
-    color: #2d3436;
+    background: transparent;
+    color: #ffffff;
+    /* background-color: #ecf0f1; */
+    /* color: #2d3436; */
 }

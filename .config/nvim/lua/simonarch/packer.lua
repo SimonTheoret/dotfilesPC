@@ -29,14 +29,10 @@ return require('packer').startup(function(use)
 
     use 'ThePrimeagen/harpoon'
 
-    use {
-        'lewis6991/gitsigns.nvim',
-        config = function() require('gitsigns').setup() end
-    }
-
     use {'nvim-tree/nvim-web-devicons'}
 
     use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
+
     use {'nvim-treesitter/playground'}
 
     use {'nvim-lua/plenary.nvim'}
@@ -53,6 +49,7 @@ return require('packer').startup(function(use)
         tag = '0.1.1',
         requires = {{'nvim-lua/plenary.nvim'}}
     }
+    pcall(require("telescope").load_extension, 'fzf') -- use fzf
 
     use {
         'VonHeikemen/lsp-zero.nvim',
@@ -95,6 +92,8 @@ return require('packer').startup(function(use)
 
     use {'yamatsum/nvim-cursorline'}
 
+    use 'mfussenegger/nvim-dap'
+
     use {
         'glepnir/dashboard-nvim',
         event = 'VimEnter',
@@ -107,8 +106,6 @@ return require('packer').startup(function(use)
             }
         end
     }
-
-    use 'mfussenegger/nvim-dap'
 
     use {'rcarriga/nvim-dap-ui', requires = {'mfussenegger/nvim-dap'}}
 
@@ -133,16 +130,7 @@ return require('packer').startup(function(use)
 
     use 'sickill/vim-monokai'
 
-    use {
-        "folke/trouble.nvim",
-        config = function()
-            require("trouble").setup {
-                -- your configuration comes here
-                -- or leave it empty to use the default settings
-                -- refer to the configuration section below
-            }
-        end
-    }
+    use {"folke/trouble.nvim"}
 
     use "jose-elias-alvarez/null-ls.nvim"
 
@@ -159,6 +147,8 @@ return require('packer').startup(function(use)
     use {'norcalli/nvim-colorizer.lua'}
 
     use {'antoinemadec/FixCursorHold.nvim'}
+
+    use {'folke/which-key.nvim'}
 
     -- Automatically set up your configuration after cloning packer.nvim
     -- Put this at the end after all plugins

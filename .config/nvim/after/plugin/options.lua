@@ -1,24 +1,30 @@
 -- General options:
-vim.opt.relativenumber = true
-vim.opt.nu = true
-vim.opt.tabstop = 4
-vim.opt.softtabstop = 4
-vim.opt.shiftwidth = 4
-vim.opt.smarttab = true
-vim.opt.expandtab = true
-vim.opt.smartindent = true
+local set = vim.opt
+set.relativenumber = true
+set.nu = true
+set.tabstop = 4
+set.softtabstop = 4
+set.shiftwidth = 4
+set.smarttab = true
+set.expandtab = true
+set.smartindent = true
 
-vim.opt.swapfile = false
-vim.opt.backup = false
-vim.opt.undodir = os.getenv("HOME").."/.vim/undodir"
-vim.opt.undofile = true
+set.swapfile = false
+set.backup = false
+set.undodir = os.getenv("HOME") .. "/.vim/undodir"
+set.undofile = true
 
-vim.opt.hlsearch = false
-vim.opt.incsearch = true
+set.hlsearch = false
+set.incsearch = true
+vim.o.ignorecase = true
+vim.o.smartcase = true
 
-vim.opt.scrolloff = 8
-vim.opt.colorcolumn = "80"
-vim.opt.updatetime = 50
+set.scrolloff = 8
+set.colorcolumn = "80"
+set.updatetime = 50
 
-vim.opt.termguicolors = true
-vim.opt.textwidth= 79
+set.termguicolors = true
+set.textwidth = 79
+vim.diagnostic.config({virtual_text = true})
+vim.o.updatetime = 250
+vim.o.completeopt = 'menuone,noselect'

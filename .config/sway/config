@@ -63,10 +63,10 @@ output * bg ~/Images/Wallpapers/city-wallpaper.jpg fill
     # Kill focused window
     bindsym $mod+q kill
 
-    # Start ranger as file system
+    # Start ranger as file system manager
     bindsym $mod+e exec alacritty -e ranger
 
-    # Start rofi as application launcher 
+    # Start rofi as application launcher
     bindsym $mod+d exec /home/simon/.config/rofi/launchers/type-1/launcher.sh
 
 

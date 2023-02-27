@@ -32,8 +32,8 @@ alias execmatlab='~/Execs/execmatlab.sh'
 # Add the actual directory path:
 PS1='%n@%m %~$ '
 
-#add rstudio to path:
-export PATH="/usr/lib/rstudio/:$PATH"
+#add to path:
+export PATH="/usr/lib/rstudio/:/home/simon/.local/bin/:$PATH"
 
 # zoxide "init"
 eval "$(zoxide init zsh)"
