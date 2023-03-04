@@ -60,6 +60,9 @@ output * bg ~/Images/Wallpapers/city-wallpaper.jpg fill
     # Start a terminal
     bindsym $mod+Return exec $term
 
+    # Start a terminal with tmux session 
+    bindsym $mod+Shift+Return exec $term -e tmux
+
     # Kill focused window
     bindsym $mod+q kill
 
