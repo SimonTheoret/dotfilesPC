@@ -35,10 +35,11 @@ vim.o.smartcase = true
 
 vim.opt.scrolloff = 8
 vim.opt.colorcolumn = "80"
-vim.opt.updatetime = 50
 vim.opt.termguicolors = true
 vim.opt.textwidth = 79
 vim.o.updatetime = 250
+vim.o.timeout = true
+vim.o.timeoutlen = 200
 vim.o.completeopt = 'menuone,noselect'
 
 vim.g.vimtex_view_general_viewer = "zathura"

@@ -20,20 +20,8 @@ output * bg ~/Images/Wallpapers/city-wallpaper.jpg fill
 #
 #   output HDMI-A-1 resolution 1920x1080 position 1920,0
 #
+output eDP-1 scale 1.125
 # You can get the names of your outputs by running: swaymsg -t get_outputs
-
-### Idle configuration
-#
-# Example configuration:
-#
-# exec swayidle -w \
-#          timeout 300 'swaylock -f -c 000000' \
-#          timeout 600 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
-#          before-sleep 'swaylock -f -c 000000'
-#
-# This will lock your screen after 300 seconds of inactivity, then turn off
-# your displays after another 300 seconds, and turn your screens back on when
-# resumed. It will also lock your screen before your computer goes to sleep.
 
 ### Input configuration
 #
@@ -225,7 +213,7 @@ include /etc/sway/config.d/*
 
 exec_always alacritty
 
-gaps inner 10
+gaps inner 8
 
 default_border none
 

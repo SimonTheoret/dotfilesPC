@@ -304,7 +304,7 @@ cursor:
     #vi_mode_style: Beam
 
     # Cursor blinking interval in milliseconds.
-    #blink_interval: 750
+    blink_interval: 500
 
     # Time after which cursor stops blinking, in seconds.
     #
