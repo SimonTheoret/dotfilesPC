@@ -123,7 +123,7 @@ font:
     #family: Hack
     #family: Source Code Pro
     #family: Mononoki Nerd Font
-    family: Hack Nerd Font
+    family: Hack Nerd Font Mono
     # The `style` can be specified to pick a specific face.
     style: Regular
 
@@ -134,7 +134,7 @@ font:
     # If the bold family is not specified, it will fall back to the
     # value specified for the normal font.
 
-    family: Hack Nerd Font
+    family: Hack Nerd Font Mono
     #family: Hack
     #family: Source Code Pro
 
@@ -148,7 +148,7 @@ font:
     # If the italic family is not specified, it will fall back to the
     # value specified for the normal font.
     #family: Hack
-    family: Hack Nerd Font
+    family: Hack Nerd Font Mono
     #family: Source Code Pro
 
     # The `style` can be specified to pick a specific face.
@@ -162,7 +162,7 @@ font:
     # value specified for the normal font.
     #family : Hack
     #family: Mononoki Nerd Font
-    family: Hack Nerd Font
+    family: Hack Nerd Font Mono
     #family: Fira Code
     #family: Source Code Pro
 
@@ -170,7 +170,7 @@ font:
     style: Bold Italic
 
     # Point size
-  size: 12.0
+  size: 11.0
 
   # Offset is the extra space around each character. `offset.y` can be thought
   # of as modifying the line spacing, and `offset.x` as modifying the letter
@@ -194,9 +194,9 @@ font:
   #builtin_box_drawing: true
 
   # If `true`, bold text is drawn using the bright color variants.
-  #draw_bold_text_with_bright_colors: false
+  draw_bold_text_with_bright_colors: true
 import:
- - ~/.config/alacritty/themes/themes/monokai_pro.yaml
+ - ~/.config/alacritty/themes/themes/tokyo-night-storm.yaml
   #
   ## Colors (Solarized Dark)
   #colors:

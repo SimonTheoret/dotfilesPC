@@ -34,7 +34,6 @@ PS1='%n@%m %~$ '
 
 #add to path:
 export PATH="/usr/lib/rstudio/:/home/simon/.local/bin/:$PATH"
-
 # zoxide "init"
 eval "$(zoxide init zsh)"
 
@@ -44,4 +43,16 @@ source /home/simon/.config/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.z
 source /usr/share/fzf/key-bindings.zsh
 source /usr/share/fzf/completion.zsh
 
+export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git  -g ""'
+export FZF_CTRL_T_COMMAND='ag --hidden --ignore .git  -g ""'
+export FZF_ALT_C_COMMAND='ag --hidden --ignore .git  -g ""'
+export FZF_DEFAULT_OPTS="
+--layout=reverse
+--info=inline
+--height=80%
+--multi
+--preview '([[ -f {} ]] && (bat --style=numbers --color=always {} || cat {})) || ([[ -d {} ]] && (tree -C {} | less)) || echo {} 2> /dev/null | head -200'
+--color='hl:148,hl+:154,pointer:032,marker:010,bg+:237,gutter:008'
+--prompt='∼ ' --pointer='▶' --marker='✓'
+--bind '?:toggle-preview'"
 eval $(thefuck --alias)

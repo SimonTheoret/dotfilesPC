@@ -47,14 +47,11 @@ vim.g.vimtex_view_general_viewer = "zathura"
 -- Focus undotree when toggled
 vim.g.undotree_SetFocusWhenToggle = 1
 
+
 -- Installing required packages:
 require('lazy').setup("plugins")
 --Mappings:
 require("simon.remap")
-require("simon.lualine_config")
-
--- Use zathura as PDF viewer
-
 
 
 

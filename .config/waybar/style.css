@@ -30,21 +30,21 @@
 @define-color bg2	#504945;
 
 
-@define-color warning 	@bryellow;
-@define-color critical	@red;
-@define-color mode	@black;
-@define-color unfocused	@bg2;
-@define-color focused	@braqua;
-@define-color inactive	@purple;
-@define-color sound	@brpurple;
-@define-color network	@purple;
-@define-color memory	@braqua;
-@define-color cpu	@green;
-@define-color temp	@brgreen;
-@define-color layout	@bryellow;
-@define-color battery	@aqua;
-@define-color date	@black;
-@define-color time	@white;
+@define-color warning 	#e0af68;
+@define-color critical	#f7768e;
+@define-color mode	#1a1b26;
+@define-color unfocused	#7aa2f7;
+@define-color focused	#9aa5ce;
+@define-color inactive	#bb9af7;
+@define-color sound	#1a1b26;
+@define-color network	#24283b;
+@define-color memory	#c0caf5;
+@define-color cpu	#565f89;
+@define-color temp	#414868;
+@define-color layout	#7aa2f7;
+@define-color battery	#565f89;
+@define-color date	#9aa5ce;
+@define-color time	#a9b1d6;
 
 /* Reset all styles */
 * {
@@ -63,7 +63,7 @@
 	background: rgba(40, 40, 40, 0.8784313725); /* #282828e0 */
 	color: @white;
 	font-family: JetBrains Mono, Siji;
-	font-size: 12pt;
+	font-size: 11pt;
 	/*font-weight: bold;*/
 }
 
@@ -83,8 +83,8 @@
 #disk,
 #user,
 #mpris {
-	padding-left: 8pt;
-	padding-right: 8pt;
+	padding-left: 2pt;
+	padding-right: 2pt;
 }
 
 /* Each critical module */
@@ -120,9 +120,9 @@
 /* Workspaces stuff */
 #workspaces button {
 	/*font-weight: bold;*/
-	padding-left: 2pt;
-	padding-right: 2pt;
-	color: @white;
+	padding-left: 6pt;
+	padding-right: 6pt;
+	color: @black;
 	background: @unfocused;
 }
 
@@ -157,7 +157,7 @@
 
 #pulseaudio {
 	background: @sound;
-	color: @black;
+	color: @white;
 }
 
 #network {
@@ -177,7 +177,7 @@
 
 #temperature {
 	background: @temp;
-	color: @black;
+	color: @white;
 }
 
 #language {
@@ -196,7 +196,7 @@
 
 #clock.date {
 	background: @date;
-	color: @white;
+	color: @black;
 }
 
 #clock.time {
@@ -231,7 +231,7 @@
 #custom-arrow5 {
 	font-size: 11pt;
 	color: @temp;
-	background: @cpu;
+	background: @network;
 }
 
 #custom-arrow6 {
